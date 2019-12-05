@@ -1,0 +1,21 @@
+cross compiling
+
+to enable our binary to run on every platfrom please use the following instructions. note that before this, you have to setup your toolchain as needed.
+
+export PATH=/path/to/gcc-arm-none-eabi/bin:$PATH
+export LDFLAGS='--specs=nosys.specs'
+export CFLAGS='-Os'
+./configure --host=arm-none-eabi --prefix=/install/path
+make install
+
+
+After the compile the code will run like this:
+
+./test
+Please, enter your string: mos
+801167e08ef61d926d67cf4acf78d3d52cca238ad435747d6adbec4fc5dec86250204f989055
+
+
+
+
+
